@@ -7,15 +7,13 @@ class Memo extends StatelessWidget {
       appBar: AppBar(
         title: Text("メモ作成"),
       ),
-      body: Column(
-        children: [
-          TextField(
-            decoration:
-                InputDecoration(border: InputBorder.none, hintText: '入 力'),
-            maxLines: 10,
-            style: TextStyle(fontSize: 20),
-          ),
-        ],
+      body: Container(
+        child: TextField(
+          decoration:
+              InputDecoration(border: InputBorder.none, hintText: '内 容'),
+          maxLines: 10,
+          style: TextStyle(fontSize: 20),
+        ),
       ),
     );
   }
