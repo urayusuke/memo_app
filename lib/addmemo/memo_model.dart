@@ -7,6 +7,12 @@ class MemoModel with ChangeNotifier {
   CollectionReference memo = FirebaseFirestore.instance.collection('memo');
 
   Future<void> addmemo() {
-    return memo.add({'content': content});
+    if (content.isEmpty) {
+      throw ('空で保存出来ません');
+    }
+    return memo.add({
+      'content': content,
+      'createdAt': Timestamp.now(),
+    });
   }
 }
