@@ -7,7 +7,7 @@
     {
       "name": "memo_app",
       "request": "launch",
-      "type": "dart"
+      "type": "dart",
     }
   ]
 }

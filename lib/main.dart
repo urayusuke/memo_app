@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:memo_app/addmemo/memo.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:memo_app/addmemo/memo_edit.dart';
 import 'package:provider/provider.dart';
 
-import 'main_model.dart';
+import 'main/main_model.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +33,7 @@ class MyApp extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => EditMemo(
+                              builder: (context) => AddMemo(
                                 memos: memos,
                               ),
                             ),
